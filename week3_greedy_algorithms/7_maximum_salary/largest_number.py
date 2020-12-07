@@ -30,7 +30,6 @@ def largest_number(a):
 
 if __name__ == '__main__':
     # input = sys.stdin.read()
-    data = input().split()
-    a = data[1:]
-    print(''.join([str(i) for i in largest_number(a)]))
-    
+    n = int(input())
+    data = list(map(int, input().split()))
+    print(''.join([str(i) for i in largest_number(data)]))

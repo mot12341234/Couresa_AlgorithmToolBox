@@ -1,5 +1,6 @@
 # Uses python3
 import sys
+from sys import stdin
 
 def get_optimal_value(capacity, weights, values, n):
     total_value = 0.
@@ -24,9 +25,9 @@ def get_optimal_value(capacity, weights, values, n):
 
 
 if __name__ == "__main__":
-    data = list(map(int, input().split()))
-    n, capacity = data[0:2]
-    values = data[2:(2 * n + 2):2]
-    weights = data[3:(2 * n + 2):2]
-    opt_value = get_optimal_value(capacity, weights, values, n)
+    data = list(map(int, stdin.read().split()))
+    n, input_capacity = data[0:2]
+    input_prices = data[2:(2 * n + 2):2]
+    input_weights = data[3:(2 * n + 2):2]
+    opt_value = get_optimal_value(input_capacity, input_weights, input_prices, n)
     print("{:.10f}".format(opt_value))
